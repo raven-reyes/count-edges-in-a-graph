@@ -22,6 +22,7 @@ public class CountNumberoFEdges {
         adjList[i].add(j); // adding j in i's vector list
         adjList[j].add(i);  // adding i in j's vector list
     }
+	// the time complexity is O(V) because we have to traverse through every adjacenncy list of every vertex
 	public static int countEdges(){
         int sum = 0;
         // traverse all vertices
@@ -32,7 +33,7 @@ public class CountNumberoFEdges {
         // The count of edge is always even because in
         // undirected graph every edge is connected
         // twice between two vertices
-        return sum / 2;
+        return sum / 2; //we divide sum by two because in undirected graph, each edge is counted twice
     }
 	@SuppressWarnings("static-access")
 	public static void main(String[] args) {
@@ -43,9 +44,9 @@ public class CountNumberoFEdges {
        Graph.addEdge( 2, 4);
        Graph.addEdge(2, 5);
        Graph.addEdge(3, 4);
-       Graph.addEdge( 4, 6);
+       Graph.addEdge( 4, 5);
      
-		System.out.println("the number of edges in this graph is: " + Graph.countEdges());
+       System.out.println("the number of edges in this graph is: " + Graph.countEdges());
 
 	}
 
